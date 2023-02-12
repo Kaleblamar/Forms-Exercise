@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Forms Exercise" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./images/html5.svg" />
+
+    <title>Forms Exercise</title>
+  </head>
+  <body>
+    <form>
+      <fieldset class="container">
+        <legend class="containerL">Customer Experience Survey</legend>
+
+        <label class="select" for="storeNumber">Store number</label>
+
+        <select class="selectInput" name="storeNumber" id="storeNumber">
+          Store number
+          <option value="selectStore" hidden>Select a Store</option>
+          <option value="3901">3901</option>
+          <option value="2421">2421</option>
+          <option value="5357">5357</option>
+        </select>
+
+        <form>
+          <fieldset class="visited">
+            <legend class="visitedL">When you visited</legend>
+            <label class="date" for="date">Date visited</label>
+            <input
+              class="dateInput"
+              type="date"
+              name="dateVisited"
+              id="date"
+              value="2022-01-01"
+              min="2022-01-01"
+              max="2022-12-31"
+            />
+            <!-- <br /> -->
+            <label class="time" for="time">Time</label>
+            <input class="timeInput" type="time" name="time" id="tme" />
+          </fieldset>
+        </form>
+        <form>
+          <label class="name" for="name">Name:</label>
+          <input class="nameInput" type="text" id="name" placeholder="Name" />
+          <br />
+          <label class="email" for="email">Email:</label>
+          <input
+            class="emailInput"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+          />
+        </form>
+        <form>
+          <fieldset class="survey">
+            <legend class="surveyL">
+              How would you rate your level of satisfaction with your visit
+            </legend>
+            <!-- <div class="radio"> -->
+            <input type="radio" name="survey" id="survey" />
+            <label for="survey1">satisfied</label>
+
+            <!-- <br /> -->
+            <input type="radio" name="survey" id="survey2" checked />
+            <label for="survey2">Neither Satisfied Nor Dissatisfied</label>
+            <!-- <br /> -->
+            <input type="radio" name="survey" id="survey3" default />
+            <label for="survey3">Dissatisfied</label>
+            <!-- </div> -->
+          </fieldset>
+        </form>
+        <label class="textArea1" for="experince"
+          >Tell us about your experience</label
+        >
+        <br />
+        <textarea
+          class="textArea2"
+          name="experience"
+          id="experience"
+          cols="60"
+          rows="4"
+        ></textarea>
+        <br />
+        <label class="number" for="visited">Times visited Last month:</label>
+        <input
+          class="numberInput"
+          type="number"
+          name="visited"
+          id="visited"
+          min="1"
+          max="30"
+        />
+        <br />
+        <input
+          class="checkboxInput"
+          type="checkbox"
+          name="check"
+          id="check"
+          required
+        />
+        <label class="checkbox" for="check"
+          >Please check the box if you would be willing to be contacted about
+          your experience</label
+        >
+        <!-- <br /> -->
+        <label class="password" for="password">Create Password:</label>
+        <input
+          class="passwordInput"
+          type="password"
+          name="password"
+          id="password"
+          minlength="5"
+          maxlength="10"
+          pattern=".{5,10}"
+          title="5-10 charcters"
+        />
+        <br />
+        <input class="reset" type="reset" value="Reset" />
+        <br />
+        <input class="submit" type="submit" value="Submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
