@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Forms Exercise" />
+    <meta name="author" content="James Kaleb Lamar" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="./images/html5.svg" />
 
@@ -19,61 +20,63 @@
 
         <select class="selectInput" name="storeNumber" id="storeNumber">
           Store number
-          <option value="selectStore" hidden>Select a Store</option>
+          dissatisfied hidden>Select a Store</>
           <option value="3901">3901</option>
           <option value="2421">2421</option>
           <option value="5357">5357</option>
         </select>
 
-        <form>
-          <fieldset class="visited">
-            <legend class="visitedL">When you visited</legend>
-            <label class="date" for="date">Date visited</label>
+        <fieldset class="visited">
+          <legend class="visitedL">When you visited</legend>
+          <div>
+            <label class="date" for="dateVisited">Date visited</label>
             <input
               class="dateInput"
               type="date"
               name="dateVisited"
-              id="date"
+              id="dateVisited"
               value="2022-01-01"
               min="2022-01-01"
               max="2022-12-31"
             />
-            <!-- <br /> -->
+          </div>
+          <!-- <br /> -->
+          <!-- div will make them display over eachother by grouping them in a container. -->
+          <div>
             <label class="time" for="time">Time</label>
             <input class="timeInput" type="time" name="time" id="tme" />
-          </fieldset>
-        </form>
-        <form>
-          <label class="name" for="name">Name:</label>
-          <input class="nameInput" type="text" id="name" placeholder="Name" />
-          <br />
-          <label class="email" for="email">Email:</label>
-          <input
-            class="emailInput"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-          />
-        </form>
-        <form>
-          <fieldset class="survey">
-            <legend class="surveyL">
-              How would you rate your level of satisfaction with your visit
-            </legend>
-            <!-- <div class="radio"> -->
-            <input type="radio" name="survey" id="survey" />
-            <label for="survey1">satisfied</label>
+          </div>
+        </fieldset>
 
-            <!-- <br /> -->
-            <input type="radio" name="survey" id="survey2" checked />
-            <label for="survey2">Neither Satisfied Nor Dissatisfied</label>
-            <!-- <br /> -->
-            <input type="radio" name="survey" id="survey3" default />
-            <label for="survey3">Dissatisfied</label>
-            <!-- </div> -->
-          </fieldset>
-        </form>
+        <label class="name" for="name">Name:</label>
+        <input class="nameInput" type="text" id="name" placeholder="Name" />
+        <br />
+        <label class="email" for="email">Email:</label>
+        <input
+          class="emailInput"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+        />
+
+        <fieldset class="survey">
+          <legend class="surveyL">
+            How would you rate your level of satisfaction with your visit
+          </legend>
+          <!-- <div class="radio"> -->
+          <input type="radio" name="survey" id="satisfied" />
+          <label for="satisfied">satisfied</label>
+
+          <!-- <br /> -->
+          <input type="radio" name="survey" id="neither" checked />
+          <label for="neither">Neither Satisfied Nor Dissatisfied</label>
+          <!-- <br /> -->
+          <input type="radio" name="survey" id="dissatisfied" default />
+          <label for="dissatisfied">Dissatisfied</label>
+          <!-- </div> -->
+        </fieldset>
+
         <label class="textArea1" for="experince"
           >Tell us about your experience</label
         >
